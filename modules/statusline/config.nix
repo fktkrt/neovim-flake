@@ -9,7 +9,6 @@ with lib; {
     vim.statusline.lualine = {
       enable = mkDefault false;
 
-      icons = mkDefault true;
       theme = mkDefault "auto";
       sectionSeparator = {
         left = mkDefault "";

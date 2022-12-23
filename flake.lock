@@ -413,23 +413,6 @@
         "type": "github"
       }
     },
-    "nvim-bufferline-lua": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1666171880,
-        "narHash": "sha256-hueIGT7KOhca0kP0M1nUYzBrzMz+DpuZSOt5iyuEa40=",
-        "owner": "akinsho",
-        "repo": "nvim-bufferline.lua",
-        "rev": "e70be6232f632d16d2412b1faf85554285036278",
-        "type": "github"
-      },
-      "original": {
-        "owner": "akinsho",
-        "ref": "v3.0.1",
-        "repo": "nvim-bufferline.lua",
-        "type": "github"
-      }
-    },
     "nvim-cmp": {
       "flake": false,
       "locked": {
@@ -590,22 +573,6 @@
         "type": "github"
       }
     },
-    "nvim-web-devicons": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1651408174,
-        "narHash": "sha256-hYFDefTMcdtoQLhwUaamyGuid69kUo+95P1wjoS2dmo=",
-        "owner": "kyazdani42",
-        "repo": "nvim-web-devicons",
-        "rev": "bdd43421437f2ef037e0dafeaaaa62b31d35ef2f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "kyazdani42",
-        "repo": "nvim-web-devicons",
-        "type": "github"
-      }
-    },
     "onedark": {
       "flake": false,
       "locked": {
@@ -697,7 +664,6 @@
         "nixpkgs": "nixpkgs",
         "null-ls": "null-ls",
         "nvim-autopairs": "nvim-autopairs",
-        "nvim-bufferline-lua": "nvim-bufferline-lua",
         "nvim-cmp": "nvim-cmp",
         "nvim-code-action-menu": "nvim-code-action-menu",
         "nvim-compe": "nvim-compe",
@@ -708,7 +674,6 @@
         "nvim-treesitter": "nvim-treesitter",
         "nvim-treesitter-context": "nvim-treesitter-context",
         "nvim-ts-autotag": "nvim-ts-autotag",
-        "nvim-web-devicons": "nvim-web-devicons",
         "onedark": "onedark",
         "plenary-nvim": "plenary-nvim",
         "registers": "registers",

@@ -15,11 +15,6 @@ in {
       description = "Enable lualine";
     };
 
-    icons = mkOption {
-      type = types.bool;
-      description = "Enable icons for lualine";
-    };
-
     theme = mkOption {
       type = types.enum (
         [
@@ -168,9 +163,7 @@ in {
         require'lualine'.setup {
           options = {
             icons_enabled = ${
-          if cfg.icons
-          then "true"
-          else "false"
+              "false"
         },
             theme = "${cfg.theme}",
             component_separators = {"${cfg.componentSeparator.left}","${cfg.componentSeparator.right}"},

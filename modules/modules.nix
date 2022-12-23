@@ -9,7 +9,6 @@
     ./core
     ./basic
     ./statusline
-    ./tabline
     ./visuals
     ./lsp
     ./treesitter

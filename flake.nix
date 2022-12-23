@@ -77,12 +77,6 @@
       inputs.flake-utils.follows = "flake-utils";
     };
 
-    # Tablines
-    nvim-bufferline-lua = {
-      url = "github:akinsho/nvim-bufferline.lua?ref=v3.0.1";
-      flake = false;
-    };
-
     # Statuslines
     lualine = {
       url = "github:hoob3rt/lualine.nvim";
@@ -182,10 +176,6 @@
       url = "github:lukas-reineke/indent-blankline.nvim";
       flake = false;
     };
-    nvim-web-devicons = {
-      url = "github:kyazdani42/nvim-web-devicons";
-      flake = false;
-    };
     gitsigns-nvim = {
       url = "github:lewis6991/gitsigns.nvim";
       flake = false;
@@ -275,7 +265,6 @@
         };
         vim.visuals = {
           enable = true;
-          nvimWebDevicons.enable = true;
           lspkind.enable = true;
           indentBlankline = {
             enable = true;
@@ -302,7 +291,6 @@
           enable = true;
           type = "nvim-cmp";
         };
-        vim.tabline.nvimBufferline.enable = true;
         vim.treesitter = {
           enable = true;
           context.enable = true;
