@@ -279,7 +279,7 @@
         };
         vim.statusline.lualine = {
           enable = true;
-          theme = "onedark";
+          theme = "nord";
         };
         vim.theme = {
           enable = true;
