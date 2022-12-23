@@ -77,12 +77,6 @@
       inputs.flake-utils.follows = "flake-utils";
     };
 
-    # Filetrees
-    nvim-tree-lua = {
-      url = "github:kyazdani42/nvim-tree.lua";
-      flake = false;
-    };
-
     # Tablines
     nvim-bufferline-lua = {
       url = "github:akinsho/nvim-bufferline.lua?ref=v3.0.1";
@@ -308,7 +302,6 @@
           enable = true;
           type = "nvim-cmp";
         };
-        vim.filetree.nvimTreeLua.enable = true;
         vim.tabline.nvimBufferline.enable = true;
         vim.treesitter = {
           enable = true;

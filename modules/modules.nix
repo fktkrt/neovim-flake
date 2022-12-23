@@ -10,7 +10,6 @@
     ./basic
     ./statusline
     ./tabline
-    ./filetree
     ./visuals
     ./lsp
     ./treesitter
