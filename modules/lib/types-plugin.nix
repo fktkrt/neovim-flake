@@ -34,7 +34,6 @@ with lib; let
     "which-key"
     "indent-blankline"
     "nvim-cursorline"
-    "sqls-nvim"
     "glow-nvim"
     "telescope"
     "rust-tools"

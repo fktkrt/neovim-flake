@@ -748,7 +748,6 @@
         "registers": "registers",
         "rnix-lsp": "rnix-lsp",
         "rust-tools": "rust-tools",
-        "sqls-nvim": "sqls-nvim",
         "telescope": "telescope",
         "tidalcycles": "tidalcycles",
         "todo-comments": "todo-comments",
@@ -796,22 +795,6 @@
       "original": {
         "owner": "simrat39",
         "repo": "rust-tools.nvim",
-        "type": "github"
-      }
-    },
-    "sqls-nvim": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1651347942,
-        "narHash": "sha256-ewCkqU5Kj1MQAjRRzOWalLcv/uOLEbtK1jFrySvZ8Y8=",
-        "owner": "nanotee",
-        "repo": "sqls.nvim",
-        "rev": "c52945aacf30247a3b82c586681c414dcd2359bd",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nanotee",
-        "repo": "sqls.nvim",
         "type": "github"
       }
     },

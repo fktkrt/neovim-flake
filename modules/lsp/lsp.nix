@@ -57,10 +57,8 @@ in {
         default = "";
       };
     };
-    sql = mkEnableOption "SQL Language LSP";
     go = mkEnableOption "Go language LSP";
     ts = mkEnableOption "TS language LSP";
-    zig.enable = mkEnableOption "Zig language LSP";
   };
 
   config = mkIf cfg.enable (
@@ -77,11 +75,6 @@ in {
           (
             if (config.vim.autocomplete.enable && (config.vim.autocomplete.type == "nvim-cmp"))
             then "cmp-nvim-lsp"
-            else null
-          )
-          (
-            if cfg.sql
-            then "sqls-nvim"
             else null
           )
         ]
@@ -149,30 +142,6 @@ in {
           --${writeIf (config.vim.git.enable && config.vim.git.gitsigns.enable) ''
           --  null_ls.builtins.code_actions.gitsigns,
           --''}
-
-          ${writeIf cfg.sql
-          ''
-            null_helpers.make_builtin({
-              method = null_methods.internal.FORMATTING,
-              filetypes = { "sql" },
-              generator_opts = {
-                to_stdin = true,
-                ignore_stderr = true,
-                suppress_errors = true,
-                command = "${pkgs.sqlfluff}/bin/sqlfluff",
-                args = {
-                  "fix",
-                  "-",
-                },
-              },
-              factory = null_helpers.formatter_factory,
-            }),
-
-            null_ls.builtins.diagnostics.sqlfluff.with({
-              command = "${pkgs.sqlfluff}/bin/sqlfluff",
-              extra_args = {"--dialect", "postgres"}
-            }),
-          ''}
 
           ${writeIf
           (cfg.nix.enable
@@ -285,21 +254,6 @@ in {
           rt.setup(rustopts)
         ''}
 
-        ${optionalString cfg.zig.enable ''
-          -- Zig config
-          lspconfig.zls.setup {
-            capabilities = capabilities,
-            on_attach=default_on_attach,
-            cmd = {"${pkgs.zls}/bin/zls"},
-            settings = {
-              ["zls"] = {
-                zig_exe_path = "${pkgs.zig}/bin/zig",
-                zig_lib_path = "${pkgs.zig}/lib/zig",
-              }
-            }
-          }
-        ''}
-
         ${writeIf cfg.python ''
           -- Python config
           lspconfig.pyright.setup{
@@ -365,18 +319,6 @@ in {
             then ""
             else "init_options = ${cfg.clang.cclsOpts}"
           }
-          }
-        ''}
-
-        ${writeIf cfg.sql ''
-          -- SQLS config
-          lspconfig.sqls.setup {
-            on_attach = function(client)
-              client.server_capabilities.execute_command = true
-              on_attach_keymaps(client, bufnr)
-              require'sqls'.setup{}
-            end,
-            cmd = {"${pkgs.sqls}/bin/sqls", "-config", string.format("%s/config.yml", vim.fn.getcwd()) }
           }
         ''}
 

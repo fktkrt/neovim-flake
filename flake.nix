@@ -1,5 +1,5 @@
 {
-  description = "Jordan's Neovim Configuration";
+  description = "kfekete's neovim configuration";
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
@@ -51,10 +51,6 @@
     };
     null-ls = {
       url = "github:jose-elias-alvarez/null-ls.nvim";
-      flake = false;
-    };
-    sqls-nvim = {
-      url = "github:nanotee/sqls.nvim";
       flake = false;
     };
     rust-tools = {
@@ -285,10 +281,8 @@
           rust.enable = isMaximal;
           python = isMaximal;
           clang.enable = isMaximal;
-          sql = isMaximal;
           ts = isMaximal;
           go = isMaximal;
-          zig.enable = isMaximal;
         };
         vim.visuals = {
           enable = true;
