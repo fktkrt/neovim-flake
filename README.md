@@ -11,7 +11,7 @@ See the [neovim-flake Manual](https://jordanisaacs.github.io/neovim-flake/) for 
 If you want to dive right into trying neovim-flake you can get a fully featured configuration with `nix` language support by running:
 
 ```
-nix run github:jordanisaacs/neovim-flake
+nix run github:fktkrt/neovim-flake
 ```
 
 ## Screenshot
