@@ -6,7 +6,7 @@ Come join the Matrix room if you have any questions or need help: [#neovim-flake
 
 ## Documentation
 
-See the [neovim-flake Manual](https://jordanisaacs.github.io/neovim-flake/) for documentation, available options, and release notes.
+Not docs yet.
 
 If you want to dive right into trying neovim-flake you can get a fully featured configuration with `nix` language support by running:
 
@@ -16,7 +16,7 @@ nix run github:fktkrt/neovim-flake
 
 ## Screenshot
 
-![screenshot](./screenshot.png)
+TODO
 
 ## Philosophy
 
