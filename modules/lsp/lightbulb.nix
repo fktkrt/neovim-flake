@@ -23,7 +23,14 @@ in {
 
     vim.luaConfigRC.lightbulb = nvim.dag.entryAnywhere ''
       -- Enable trouble diagnostics viewer
-      require'nvim-lightbulb'.setup()
+      require'nvim-lightbulb'.setup({
+        status_text = {
+          enabled = true,
+        },
+        autocmd = {
+          enabled = true,
+        }
+      })
     '';
   };
 }
